@@ -1,13 +1,13 @@
-#def (a):
-   # return 'string'
+def f ():
+    return 'string'
 
-#a=f
+a=f
 
-#print(type(f))
+print(type(f))
 print(type(a))
 print(a())
 
-def derivar (funcao, delta_x=0.00000001)
+def derivar (funcao, delta_x=0.00000001):
     def funcao_derivada (x):
         return (funcao(x+delta_x)- funcao(x))/delta_x
     return funcao_derivada

@@ -10,7 +10,7 @@ print(lista2)
 lista3=['Celso', 'Thalita']
 lista3.extend(lista)
 #lista2=[n+'s' for n in lista]
-#print(lista3+lista) //elas não foram alteradas no mais igual não altera
+#print(lista3+lista) //elas nÃ£o foram alteradas no mais igual nÃ£o altera
 # sorted cria uma nova e ordena essa nova com os dados da outra
 #o .sort altera a propria lista
 print (lista3)
