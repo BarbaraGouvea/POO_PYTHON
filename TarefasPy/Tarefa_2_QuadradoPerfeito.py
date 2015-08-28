@@ -20,15 +20,28 @@ assert [1,4,9]==quadrados_menores(11)
 def soma_quadrados (n):
     if n>0:
         menores=quadrados_menores(n)
-        ultimo=quadrados_menores[-1]
+        ultimo=menores[-1]
         if ultimo==n:
            return [n]
         else:
-           lst= [ultimo]
-           n-= ultimo
-           lst.extend(quadrados_menores(n))
-           return lst         
+           ultimo=menores.pop()
+           lista_escolhida=[ultimo]
+           lista_escolhida.extend((soma_quadrados(n-ultimo)))
+           
+           while menores:
+               lista_escolhida_2=gerar_solucao(menores, n)
+               if len (lista_escolhida_2)<len(lista_escolhida):
+                   lista_escolhida=lista_escolhida_2
+           return lista_escolhida
+                   
+                       
     return [0]
+
+def gerar_solucao(menores,n):
+    ultimo=menores.pop()
+    lista_escolhida=[ultimo]
+    lista_escolhida.extend(soma_quadrados(n-ultimo))
+    return lista_escolhida
 
 
 assert [0]== soma_quadrados(0)
