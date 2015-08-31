@@ -26,5 +26,5 @@ def para_inteiros (string_n):
 
 assert 1==para_inteiros('um')
 assert 12==para_inteiros('um, dois')
-assert 123==para_inteiros('um, dois,')
+assert 123==para_inteiros('um, dois, tres')
 

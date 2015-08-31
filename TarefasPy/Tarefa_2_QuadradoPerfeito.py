@@ -1,14 +1,14 @@
 def quadrados_menores(n):
-    return [i**2 for i in range (1, n+1) if i**2 <=n]#tá fazendo duas vezes
-    '''
+    #return [i**2 for i in range (1, n+1) if i**2 <=n]#tá fazendo duas vezes
+    
     lst=[]
-     for i in range(1, n+1):
+    for i in range(1, n+1):
         quadrado=i**2
         if quadrado <=n:
-          lst.append(quadrado) 
+            lst.append(quadrado) 
         else:
             return lst  
-    return lst'''
+    return lst
         
 
 assert [1]==quadrados_menores(1)
